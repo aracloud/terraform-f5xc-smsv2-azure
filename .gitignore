@@ -1,0 +1,13 @@
+# some defaults
+.DS_Store
+.vscode
+
+# dirs
+#/exclude/*
+
+# terraform files
+.terraform*
+.terraform/
+**/.terraform*
+**/.terraform/
+**/terraform.tfstate*
