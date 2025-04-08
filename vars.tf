@@ -14,12 +14,15 @@ variable "prefix" {
   default = "ara-swiss"
 }
 
+####################################
+# define azure wide vars
+
 variable "azure-location" {
   description = "azure location to run the deployment"
   default = "switzerlandnorth"
 }
 
-# azure docker node type
+# azure docker node instance type
 variable "docker-instance-type" {
   description = "instance type"
   default = "Standard_F2"
@@ -72,7 +75,7 @@ variable "ce-node-user" {
   default = "volterra-admin"
 }
 
-# ce tag owner
+# tag: owner of azure ce
 variable "tag_owner" {
   description = ""
   default = "user@example.moc"
@@ -92,4 +95,69 @@ variable "stor_img_ref_ce" {
     sku       = "f5xccebyol"
     version   = "2024.44.1"
   }
+}
+
+####################################
+# XC lb related vars
+
+# tenant
+variable "xc_tenant" {
+  type = string
+  default = "f5-emea-ent-bceuutam"
+}
+
+# site reference
+variable "xc_tenant_site" {
+  type = string
+  default = local.smsv2-site-name
+}
+
+# namespace
+variable "xc_namespace" {
+  type = string
+  default = "a-arquint"
+}
+
+# pool name
+variable "xc_origin_pool" {
+  type = string
+  default = local.smsv2-site-name
+}
+
+# pool member backend ip address
+variable "xc_origin_ip1" {
+  type = string
+  default = "10.0.2.5"
+}
+
+
+
+# loadbalancer
+variable "xc_loadbalancer" {
+  type = string
+  default = "lb-https-tf-docker-dvwa"
+}
+
+# origin pool service port
+variable "xc_pub_app_port" {
+  type = string
+  default = "8080"
+}
+
+# origin pool no tls
+variable "xc_pub_app_no_tls" {
+  type = string
+  default = "true"
+}
+
+# waf policy 
+variable "xc_wafpol_name" {
+  type = string
+  default = "waap-tf-docker-dvwa"
+}
+
+# application full qualified domain name
+variable "xc_fqdn_app" {
+  type = string
+  default = "dockerdvwa.xcemea.f5demo.ch"
 }
