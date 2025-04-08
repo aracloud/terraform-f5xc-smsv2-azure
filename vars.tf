@@ -107,10 +107,10 @@ variable "xc_tenant" {
 }
 
 # site reference
-variable "xc_tenant_site" {
-  type = string
-  default = local.smsv2-site-name
-}
+#variable "xc_tenant_site" {
+#  type = string
+#  default = ${local.smsv2-site-name}
+#}
 
 # namespace
 variable "xc_namespace" {
@@ -119,10 +119,10 @@ variable "xc_namespace" {
 }
 
 # pool name
-variable "xc_origin_pool" {
-  type = string
-  default = local.smsv2-site-name
-}
+#variable "xc_origin_pool" {
+#  type = string
+#  default = ${local.smsv2-site-name}
+#}
 
 # pool member backend ip address
 variable "xc_origin_ip1" {
