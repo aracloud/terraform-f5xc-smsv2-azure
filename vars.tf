@@ -130,14 +130,6 @@ variable "xc_origin_ip1" {
   default = "10.0.2.5"
 }
 
-
-
-# loadbalancer
-variable "xc_loadbalancer" {
-  type = string
-  default = "lb-https-tf-docker-dvwa"
-}
-
 # origin pool service port
 variable "xc_pub_app_port" {
   type = string
