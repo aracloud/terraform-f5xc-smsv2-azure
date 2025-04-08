@@ -62,7 +62,7 @@ resource "volterra_app_firewall" "waap-tf" {
 resource "volterra_http_loadbalancer" "lb-https-tf" {
   depends_on = [volterra_origin_pool.xc_origin_pool]
   //Mandatory "Metadata"
-  name      = var.xc_loadbalancer
+  name      = "lb-${local.smsv2-site-name}"
   //Name of the namespace where the origin pool must be deployed
   namespace = var.xc_namespace
   //End of mandatory "Metadata" 
