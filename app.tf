@@ -67,7 +67,7 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   namespace = var.xc_namespace
   //End of mandatory "Metadata" 
   //Mandatory "Basic configuration" with Auto-Cert 
-  domains = [var.xc_fqdn_app]
+  domains = ["dvwa-${random_id.xc-mcn-swiss-1-id.hex}.${var.xc_app_domain}"]
   https_auto_cert {
     add_hsts = true
     http_redirect = true
@@ -93,7 +93,7 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   disable_rate_limit = true
   //WAAP Policy reference, created earlier in this plan - refer to the same name
   app_firewall {
-    name = var.xc_wafpol_name
+    name = "wafpol-${local.smsv2-site-name}"
     namespace = var.xc_namespace
   }
 

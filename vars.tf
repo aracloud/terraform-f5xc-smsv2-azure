@@ -142,14 +142,9 @@ variable "xc_pub_app_no_tls" {
   default = "true"
 }
 
-# waf policy 
-variable "xc_wafpol_name" {
+# application domain
+variable "xc_app_domain" {
   type = string
-  default = "waap-tf-docker-dvwa"
+  default = "xcemea.f5demo.ch"
 }
 
-# application full qualified domain name
-variable "xc_fqdn_app" {
-  type = string
-  default = "dockerdvwa.xcemea.f5demo.ch"
-}
