@@ -68,7 +68,7 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   //End of mandatory "Metadata" 
   
   //Mandatory "Basic configuration" with Auto-Cert 
-  domains = ["dvwa-${random_id.xc-mcn-swiss-1-id.hex}.${var.xc_app_domain}"]
+  domains = ["dvwa${random_id.xc-mcn-swiss-1-id.hex}.${var.xc_app_domain}"]
 
   https_auto_cert {
     add_hsts = true
