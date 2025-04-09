@@ -33,8 +33,8 @@ resource "volterra_origin_pool" "xc_origin_pool" {
 
 //Definition of the WAAP Policy
 resource "volterra_app_firewall" "waap-tf" {
-  name      = "wafpol-${local.smsv2-site-name}"
-  namespace = "var.xc_namespace"
+  name      = local.smsv2-site-name
+  namespace = var.xc_namespace
 
   // One of the arguments from this list "allow_all_response_codes allowed_response_codes" must be set
   allow_all_response_codes = true
@@ -62,12 +62,14 @@ resource "volterra_app_firewall" "waap-tf" {
 resource "volterra_http_loadbalancer" "lb-https-tf" {
   depends_on = [volterra_origin_pool.xc_origin_pool]
   //Mandatory "Metadata"
-  name      = "lb-${local.smsv2-site-name}"
+  name      = local.smsv2-site-name
   //Name of the namespace where the origin pool must be deployed
   namespace = var.xc_namespace
   //End of mandatory "Metadata" 
+  
   //Mandatory "Basic configuration" with Auto-Cert 
   domains = ["dvwa-${random_id.xc-mcn-swiss-1-id.hex}.${var.xc_app_domain}"]
+
   https_auto_cert {
     add_hsts = true
     http_redirect = true
@@ -83,7 +85,8 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
         namespace = var.xc_namespace
       }
       weight = 1
-    }
+  }
+
   //Mandatory "VIP configuration"
   advertise_on_public_default_vip = true
   //End of mandatory "VIP configuration"
@@ -91,9 +94,10 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   no_service_policies = true
   no_challenge = true
   disable_rate_limit = true
+  
   //WAAP Policy reference, created earlier in this plan - refer to the same name
   app_firewall {
-    name = "wafpol-${local.smsv2-site-name}"
+    name = local.smsv2-site-name
     namespace = var.xc_namespace
   }
 
