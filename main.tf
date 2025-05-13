@@ -1,4 +1,4 @@
-resource "random_id" "xc-mcn-swiss-1-id" {
+resource "random_id" "xc-mcn-random-id" {
   byte_length = 2
 }
 
@@ -46,7 +46,7 @@ resource "volterra_securemesh_site_v2" "xc-mcn-smsv2-appstack" {
 
 # xc ce initialization token 
 resource "volterra_token" "xc-mcn-sitetoken" {
-  name      = "${var.prefix}-token-${random_id.xc-mcn-swiss-1-id.hex}"
+  name      = "${var.prefix}-token-${random_id.xc-mcn-random-id.hex}"
   namespace = "system"
   type = "1"
   site_name = local.smsv2-site-name
@@ -95,7 +95,7 @@ resource "azurerm_virtual_machine" "f5xc-nodes" {
   }
 
   os_profile {
-    computer_name  = "${var.prefix}-node-${random_id.xc-mcn-swiss-1-id.hex}"
+    computer_name  = "${var.prefix}-node-${random_id.xc-mcn-random-id.hex}"
     admin_username = var.ce-node-user
     admin_password = random_string.password.result
     custom_data = base64encode(templatefile("${path.module}/user-data.tpl", {
@@ -109,14 +109,14 @@ resource "azurerm_virtual_machine" "f5xc-nodes" {
   }
 
   tags = {
-    Name   = "{var.prefix}-node-[random_id.xc-mcn-swiss-1-id.hex]"
+    Name   = "{var.prefix}-node-[random_id.xc-mcn-random-id.hex]"
     source = "terraform"
     owner  = var.tag_owner
   }
 }
 
 resource "azurerm_resource_group" "azure_rg" {
-  name     = "${var.prefix}-rg-${random_id.xc-mcn-swiss-1-id.hex}"
+  name     = "${var.prefix}-rg-${random_id.xc-mcn-random-id.hex}"
   location = "${var.azure-location}"
 }
 
