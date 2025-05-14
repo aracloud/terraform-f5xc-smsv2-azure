@@ -19,7 +19,14 @@ variable "prefix" {
 
 variable "azure-location" {
   description = "azure location to run the deployment"
-  default = "switzerlandnorth"
+  #default = "westus"
+  default = "westeurope"
+  #default = "switzerlandnorth"
+}
+
+# tag: source "git" and "host" for azure resource group 
+variable "tag_source" {
+  default = "terraform-f5xc-smsv2-azure debian03"
 }
 
 # azure docker node instance type
