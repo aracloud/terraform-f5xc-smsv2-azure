@@ -29,6 +29,11 @@ variable "tag_source" {
   default = "terraform-f5xc-smsv2-azure debian03"
 }
 
+# tag: owner azure resource group
+variable "tag_owner" {
+  default = "ara@f5.com"
+}
+
 # azure docker node instance type
 variable "docker-instance-type" {
   description = "instance type"
