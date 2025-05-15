@@ -93,12 +93,6 @@ variable "ce-node-user" {
   default = "volterra-admin"
 }
 
-# tag: owner of azure ce
-variable "tag_owner" {
-  description = ""
-  default = "user@example.moc"
-}
-
 # azure ce node image reference
 variable "stor_img_ref_ce" {
   type = object({
