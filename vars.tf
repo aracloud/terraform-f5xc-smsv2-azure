@@ -2,7 +2,7 @@
 # define local varaiables
 
 locals {
-  smsv2-site-name = "${var.prefix}-azure-${random_id.xc-mcn-swiss-1-id.hex}"
+  smsv2-site-name = "${var.prefix}-azure-${random_id.xc-mcn-random-id.hex}"
 }
 
 
