@@ -52,6 +52,12 @@ variable "docker-node-user" {
   default = "adminuser"
 }
 
+# azure ssh public key
+variable "docker-pub-key" {
+  description = "public key on terraform machine"
+  default = "~/.ssh/id_rsa.pub"
+}
+
 # azure docker node image reference
 # (corresponds with custom-data.tpl)
 variable "src_img_ref_docker" {
