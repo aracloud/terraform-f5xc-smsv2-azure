@@ -16,7 +16,7 @@ Before using this Terraform project, ensure you have the following:
 
 - **Terraform CLI** installed on your machine.
 - An **Azure account** (CLI "az login").
-- API credentials (P12 file and URL) for **F5 SaaS**.
+- API Certificate (P12 file and URL) for **F5 SaaS**.
 - Access to existing **subnets** and **security groups** in Azure (if not creating them).
 - SSH public key for VM authentication (optional).
 
