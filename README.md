@@ -83,4 +83,44 @@ Here are some key variables to configure:
   xc_app_domain = "<FQDN-DNS>"
   ```
 
+### 3. Initialize Terraform
 
+Run the following command to initialize Terraform and download required providers:
+
+```bash
+terraform init
+```
+
+### 4. Plan the Deployment
+
+Verify the configuration by running:
+
+```bash
+terraform plan
+```
+
+This command shows the resources Terraform will create.
+
+### 5. Deploy the Resources
+
+Apply the configuration to create resources in Azure:
+
+```bash
+terraform apply
+```
+
+Type `yes` to confirm the deployment.
+
+---
+
+## Cleanup
+
+To destroy all resources created by this project, run:
+
+```bash
+terraform destroy
+```
+
+Type `yes` to confirm the deletion.
+
+---
