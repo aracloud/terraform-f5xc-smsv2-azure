@@ -5,6 +5,9 @@
 This Terraform project deploys a single Azure virtual machine (VMs) integrated with F5 SaaS
 using single NIC configuration for demo or PoC purposes only.
 
+The deployment will create a random id which is used for several object
+naming conventions.
+
 ---
 
 ## Getting Started
@@ -15,8 +18,7 @@ The modules are available here : https://registry.terraform.io/providers/volterr
 Before using this Terraform project, ensure you have the following:
 
 - **Terraform CLI** installed on your machine
-- An **Azure account** (CLI "az login")
-- Access to existing **subnets** and **security groups** in **Azure** (if not creating them)
+- An **Azure account** (CLI "az login") to create **subnets**, **security groups** etc.
 - API Certificate (P12 file and URL) for **F5 SaaS** access
 - SSH public key for VM authentication (optional)
 
