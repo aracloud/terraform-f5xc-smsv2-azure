@@ -34,6 +34,7 @@ project-directory/
 ├── main.tf
 ├── providers.tf
 ├── README.md
+└── terraform.tfvars
 ├── user-data.tpl
 └── vars.tf
 ```
