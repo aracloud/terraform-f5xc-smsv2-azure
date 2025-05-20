@@ -14,11 +14,11 @@ The modules are available here : https://registry.terraform.io/providers/volterr
 
 Before using this Terraform project, ensure you have the following:
 
-- **Terraform CLI** installed on your machine.
-- An **Azure account** (CLI "az login").
-- API Certificate (P12 file and URL) for **F5 SaaS**.
-- Access to existing **subnets** and **security groups** in Azure (if not creating them).
-- SSH public key for VM authentication (optional).
+- **Terraform CLI** installed on your machine
+- An **Azure account** (CLI "az login")
+- Access to existing **subnets** and **security groups** in **Azure** (if not creating them)
+- API Certificate (P12 file and URL) for **F5 SaaS** access
+- SSH public key for VM authentication (optional)
 
 Doc for API Certificate generation: https://docs.cloud.f5.com/docs/how-to/user-mgmt/credentials 
 
