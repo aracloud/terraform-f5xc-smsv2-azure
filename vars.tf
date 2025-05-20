@@ -78,7 +78,9 @@ variable "src_img_ref_docker" {
 # azure ce node type
 variable "f5xc-sms-instance-type" {
   description = "instance type"
-  default = "Standard_DS4_v2"
+  default = "Standard_DS3_v2"
+  #default = "Standard_DS4_v2"
+  #default = "Standard_DS5_v2"
 }
 
 # azure ce node disk type
