@@ -1,4 +1,4 @@
-# Customer Edge (CE) with Public IP Assignment (Usable for All Normal Use Cases)
+# F5 SaaS Customer Edge (CE) with Public IP Assignment (Usable for All Normal Use Cases)
 
 ## Overview
 This Terraform project deploys a single Azure virtual machine (VMs) integrated with F5 SaaS
