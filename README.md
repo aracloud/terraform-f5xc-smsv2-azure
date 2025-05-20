@@ -51,7 +51,7 @@ cd <repository_name>
 
 ### 2. export F5 SaaS variables
 
-Than "export" the env variables accordingly to authenticate via terraform:
+"export" the env variables to authenticate via terraform:
 
 ```
 export VES_P12_PASSWORD=<P12_cert_password>
