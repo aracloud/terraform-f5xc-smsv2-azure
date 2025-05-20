@@ -63,8 +63,8 @@ export VOLT_API_P12_FILE=/path/to/the/p12/file_api-creds.p12
 
 ### 3. Update Variables
 
-#### Modify `vars.tf`
-Update the values in `vars.tf` to match your deployment needs.
+#### Modify `terraform.tfvars`
+Update the values in `terraform.tfvars` to match your deployment needs.
 
 Here are some key variables to configure:
 
@@ -82,6 +82,7 @@ Here are some key variables to configure:
 - **XC wide Variables:**
   ```hcl
   xc_app_domain = "<FQDN-DNS>"
+  xc_namespace = "a-arquint"
   ```
 
 ### 3. Initialize Terraform
