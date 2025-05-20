@@ -32,8 +32,6 @@ project-directory/
 ├── main.tf
 ├── providers.tf
 ├── README.md
-├── terraform.tfstate
-├── terraform.tfstate.backup
 ├── user-data.tpl
 └── vars.tf
 ```
