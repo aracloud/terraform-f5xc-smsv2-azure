@@ -15,7 +15,7 @@ The modules are available here : https://registry.terraform.io/providers/volterr
 Before using this Terraform project, ensure you have the following:
 
 - **Terraform CLI** installed on your machine.
-- An **Azure account** with appropriate permissions to create resources (connected via command line "az login").
+- An **Azure account** (CLI "az login").
 - API credentials (P12 file and URL) for **Volterra**.
 - Access to existing **subnets** and **security groups** in Azure (if not creating them).
 - SSH public key for VM authentication (optional).
