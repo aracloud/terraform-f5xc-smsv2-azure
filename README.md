@@ -24,6 +24,7 @@ Doc for API Certificate generation: https://docs.cloud.f5.com/docs/how-to/user-m
 
 ---
 
+```
 project-directory/
 ├── app.tf
 ├── custom-data.tpl
@@ -35,6 +36,7 @@ project-directory/
 ├── terraform.tfstate.backup
 ├── user-data.tpl
 └── vars.tf
+```
 
 ---
 
