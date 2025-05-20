@@ -1,9 +1,9 @@
-# terraform-f5xc-smsv2-azure example deployment in Azure
 # Customer Edge (CE) with Public IP Assignment (Usable for All Normal Use Cases)
 
 ## Overview
 This Terraform project deploys a single Azure virtual machine (VMs) integrated with F5 SaaS
-using single NIC configuration for demo or PoC purposes only.
+using single NIC configuration and a docker host in **Azure** with a demo application
+for demo or PoC purposes only.
 
 The deployment will create a random id which is used for several object
 naming conventions.
