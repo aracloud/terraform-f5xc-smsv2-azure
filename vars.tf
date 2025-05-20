@@ -11,7 +11,7 @@ locals {
 
 variable "prefix" {
   description = "prefix for created objects"
-  default = "ara-swiss"
+  default = string
 }
 
 ####################################
@@ -19,43 +19,41 @@ variable "prefix" {
 
 variable "azure-location" {
   description = "azure location to run the deployment"
-  #default = "westus"
-  default = "westeurope"
-  #default = "switzerlandnorth"
+  #default = string
 }
 
 # tag: source "git" and "host" for azure resource group 
 variable "tag_source" {
-  default = "terraform-f5xc-smsv2-azure debian03"
+  default = string
 }
 
 # tag: owner azure resource group
 variable "tag_owner" {
-  default = "ara@f5.com"
+  default = string
 }
 
 # azure docker node instance type
 variable "docker-instance-type" {
   description = "instance type"
-  default = "Standard_F2"
+  default = string
 }
 
 # azure docker node disk type
 variable "docker-storage-account-type" {
   description = "storage account type"
-  default = "Standard_LRS"
+  default = string
 }
 
 # azure docker node user
 variable "docker-node-user" {
   description = "docker user"
-  default = "adminuser"
+  default = string
 }
 
 # azure ssh public key
 variable "docker-pub-key" {
   description = "public key on terraform machine"
-  default = "~/.ssh/id_rsa.pub"
+  default = string
 }
 
 # azure docker node image reference
@@ -67,32 +65,24 @@ variable "src_img_ref_docker" {
     sku       = string
     version   = string
   })
-  default = {
-    publisher = "debian"
-    offer     = "debian-12"
-    sku       = "12"
-    version   = "latest"    
-  }
 }
 
 # azure ce node type
 variable "f5xc-sms-instance-type" {
   description = "instance type"
-  default = "Standard_DS3_v2"
-  #default = "Standard_DS4_v2"
-  #default = "Standard_DS5_v2"
+  default = string
 }
 
 # azure ce node disk type
 variable "f5xc-sms-storage-account-type" {
   description = "storage account type"
-  default = "Standard_LRS"
+  default = string
 }
 
 # ce node user
 variable "ce-node-user" {
   description = "ce user"
-  default = "volterra-admin"
+  default = string
 }
 
 # azure ce node image reference
@@ -103,12 +93,6 @@ variable "stor_img_ref_ce" {
     sku       = string
     version   = string
   })
-  default = {
-    publisher = "f5-networks"
-    offer     = "f5xc_customer_edge"
-    sku       = "f5xccebyol"
-    version   = "2024.44.1"
-  }
 }
 
 ####################################
@@ -117,7 +101,7 @@ variable "stor_img_ref_ce" {
 # tenant
 variable "xc_tenant" {
   type = string
-  default = "f5-emea-ent-bceuutam"
+  default = string
 }
 
 # site reference
@@ -129,7 +113,7 @@ variable "xc_tenant" {
 # namespace
 variable "xc_namespace" {
   type = string
-  default = "a-arquint"
+  default = string
 }
 
 # pool name
@@ -141,24 +125,24 @@ variable "xc_namespace" {
 # pool member backend ip address
 variable "xc_origin_ip1" {
   type = string
-  default = "10.0.2.5"
+  default = string
 }
 
 # origin pool service port
 variable "xc_pub_app_port" {
   type = string
-  default = "8080"
+  default = string
 }
 
 # origin pool no tls
-variable "xc_pub_app_no_tls" {
+variable "" {
   type = string
-  default = "true"
+  default = string
 }
 
 # application domain
 variable "xc_app_domain" {
   type = string
-  default = "xcemea.f5demo.ch"
+  default = string
 }
 
