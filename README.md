@@ -67,11 +67,20 @@ Update the values in `vars.tf` to match your deployment needs.
 
 Here are some key variables to configure:
 
-- **Azure Variables:**
+- **Planet wide Variables:**
   ```hcl
-  location             = "<Azure Region>"
-  resource_group_name = "<Resource Group Name>"
-  vnet_name           = "<Virtual Network Name>"
+  prefix = "<Object Naming Prefix>"
+  ```
+
+- **Azure wide Variables:**
+  ```hcl
+  azure-location = "<Azure Location>"
+  docker-pub-key = "<ssh public key location>"
+  ```
+
+- **XC wide Variables:**
+  ```hcl
+  xc_app_domain = "<FQDN-DNS>"
   ```
 
 
