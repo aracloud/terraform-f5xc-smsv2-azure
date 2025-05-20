@@ -11,7 +11,7 @@ locals {
 
 variable "prefix" {
   description = "prefix for created objects"
-  default = string
+  type = string
 }
 
 ####################################
@@ -19,41 +19,41 @@ variable "prefix" {
 
 variable "azure-location" {
   description = "azure location to run the deployment"
-  #default = string
+  type = string
 }
 
 # tag: source "git" and "host" for azure resource group 
 variable "tag_source" {
-  default = string
+  type = string
 }
 
 # tag: owner azure resource group
 variable "tag_owner" {
-  default = string
+  type = string
 }
 
 # azure docker node instance type
 variable "docker-instance-type" {
   description = "instance type"
-  default = string
+  type = string
 }
 
 # azure docker node disk type
 variable "docker-storage-account-type" {
   description = "storage account type"
-  default = string
+  type = string
 }
 
 # azure docker node user
 variable "docker-node-user" {
   description = "docker user"
-  default = string
+  type = string
 }
 
 # azure ssh public key
 variable "docker-pub-key" {
   description = "public key on terraform machine"
-  default = string
+  type = string
 }
 
 # azure docker node image reference
@@ -70,19 +70,19 @@ variable "src_img_ref_docker" {
 # azure ce node type
 variable "f5xc-sms-instance-type" {
   description = "instance type"
-  default = string
+  type = string
 }
 
 # azure ce node disk type
 variable "f5xc-sms-storage-account-type" {
   description = "storage account type"
-  default = string
+  type = string
 }
 
 # ce node user
 variable "ce-node-user" {
   description = "ce user"
-  default = string
+  type = string
 }
 
 # azure ce node image reference
@@ -101,7 +101,6 @@ variable "stor_img_ref_ce" {
 # tenant
 variable "xc_tenant" {
   type = string
-  default = string
 }
 
 # site reference
@@ -113,7 +112,6 @@ variable "xc_tenant" {
 # namespace
 variable "xc_namespace" {
   type = string
-  default = string
 }
 
 # pool name
@@ -125,24 +123,20 @@ variable "xc_namespace" {
 # pool member backend ip address
 variable "xc_origin_ip1" {
   type = string
-  default = string
 }
 
 # origin pool service port
 variable "xc_pub_app_port" {
   type = string
-  default = string
 }
 
 # origin pool no tls
-variable "" {
+variable "xc_pub_app_no_tls" {
   type = string
-  default = string
 }
 
 # application domain
 variable "xc_app_domain" {
   type = string
-  default = string
 }
 
