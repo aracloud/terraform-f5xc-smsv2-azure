@@ -20,7 +20,7 @@ Before using this Terraform project, ensure you have the following:
 - **Terraform CLI** installed on your machine
 - An **Azure account** (CLI "az login") to create **subnets**, **security groups** etc.
 - API Certificate (P12 file and URL) for **F5 SaaS** access
-- SSH public key for VM authentication (optional)
+- SSH public key for Docker Host VM (adminuser) authentication 
 
 Doc for API Certificate generation: https://docs.cloud.f5.com/docs/how-to/user-mgmt/credentials 
 
@@ -81,8 +81,9 @@ Here are some key variables to configure:
 
 - **XC wide Variables:**
   ```hcl
-  xc_app_domain = "<FQDN-DNS>"
+  xc_tenant = "<F5 SaaS Tenant>"
   xc_namespace = "<User Namespace>"
+  xc_app_domain = "<FQDN-DNS>"
   ```
 
 ### 3. Initialize Terraform
