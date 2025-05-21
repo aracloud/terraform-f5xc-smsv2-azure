@@ -1,5 +1,3 @@
-# custom-data.tpl: docker host definition
-
 #!/bin/bash
 
 # prep packages

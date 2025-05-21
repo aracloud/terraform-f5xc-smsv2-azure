@@ -1,7 +1,7 @@
 prefix = "ara-swiss"
 
-# azure-location = "westus"
-azure-location = "westeurope"
+azure-location = "westus"
+# azure-location = "westeurope"
 # azure-location = "switzerlandnorth"
 
 tag_source = "terraform-f5xc-smsv2-azure debian03"
