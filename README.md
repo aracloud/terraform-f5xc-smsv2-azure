@@ -82,7 +82,7 @@ Here are some key variables to configure:
 - **XC wide Variables:**
   ```hcl
   xc_app_domain = "<FQDN-DNS>"
-  xc_namespace = "a-arquint"
+  xc_namespace = "<User Namespace>"
   ```
 
 ### 3. Initialize Terraform
