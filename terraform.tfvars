@@ -4,7 +4,7 @@ azure-location = "westus"
 # azure-location = "westeurope"
 # azure-location = "switzerlandnorth"
 
-tag_source = "terraform-f5xc-smsv2-azure debian03"
+tag_source = "terraform-f5xc-smsv2-azure apupi"
 tag_owner = "ara@f5.com"
 
 docker-instance-type = "Standard_F2"
