@@ -1,4 +1,4 @@
-prefix = "ara-swiss-ce"
+prefix = "ara-swiss"
 
 azure-location = "westus"
 # azure-location = "westeurope"

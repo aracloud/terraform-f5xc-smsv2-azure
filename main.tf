@@ -116,7 +116,7 @@ resource "azurerm_virtual_machine" "f5xc-nodes" {
 }
 
 resource "azurerm_resource_group" "azure_rg" {
-  name     = "${var.prefix}-rg-${random_id.xc-mcn-random-id.hex}"
+  name     = "${var.prefix}-ce-rg-${random_id.xc-mcn-random-id.hex}"
   location = "${var.azure-location}"
   tags = {
     source = var.tag_source_git
