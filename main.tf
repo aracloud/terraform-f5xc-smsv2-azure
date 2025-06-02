@@ -119,8 +119,9 @@ resource "azurerm_resource_group" "azure_rg" {
   name     = "${var.prefix}-rg-${random_id.xc-mcn-random-id.hex}"
   location = "${var.azure-location}"
   tags = {
-    source = var.tag_source
+    source = var.tag_source_git
     owner  = var.tag_owner
+    host  = var.tag_source_host
   }
 }
 

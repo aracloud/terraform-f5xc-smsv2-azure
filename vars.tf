@@ -22,13 +22,18 @@ variable "azure-location" {
   type = string
 }
 
-# tag: source "git" and "host" for azure resource group 
-variable "tag_source" {
+# tag: source "git" for azure resource group 
+variable "tag_source_git" {
   type = string
 }
 
 # tag: owner azure resource group
 variable "tag_owner" {
+  type = string
+}
+
+# tag: source "host" for azure resource group 
+variable "tag_source_host" {
   type = string
 }
 
