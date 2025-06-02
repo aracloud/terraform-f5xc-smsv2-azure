@@ -25,8 +25,7 @@ resource "volterra_securemesh_site_v2" "xc-mcn-smsv2-appstack" {
   enable_ha               = false
 
   labels = {
-    "ves.io/provider"     = "ves-io-azure"
-    "de1chk1nd-mcn-sites" = "vk8s"
+    "ves.io/provider"     = "ves-io-AZURE"
   }
 
   re_select {
