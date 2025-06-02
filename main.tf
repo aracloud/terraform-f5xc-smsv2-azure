@@ -121,7 +121,8 @@ resource "azurerm_resource_group" "azure_rg" {
   tags = {
     source = var.tag_source_git
     owner  = var.tag_owner
-    host  = var.tag_source_host
+    host   = var.tag_source_host
+    create = local.today-timestamp
   }
 }
 
