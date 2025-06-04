@@ -91,7 +91,7 @@ Here are some key variables to configure:
   xc_app_domain = "your-app-fqdn"
   ```
 
-### 3. Initialize Terraform
+### 4. Initialize Terraform
 
 Run the following command to initialize Terraform and download required providers:
 
@@ -99,7 +99,7 @@ Run the following command to initialize Terraform and download required provider
 terraform init
 ```
 
-### 4. Plan the Deployment
+### 5. Plan the Deployment
 
 Verify the configuration by running:
 
@@ -109,7 +109,7 @@ terraform plan
 
 This command shows the resources Terraform will create.
 
-### 5. Deploy the Resources
+### 6. Deploy the Resources
 
 Apply the configuration to create resources in Azure:
 
