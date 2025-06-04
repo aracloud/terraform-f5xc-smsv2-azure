@@ -76,7 +76,9 @@ Here are some key variables to configure:
 - **Azure wide Variables:**
   ```hcl
   azure-location = "<Azure Location>"
-  docker-pub-key = "<ssh public key location>"
+  tag_owner = "your-email"
+  tag_source_host = "your-host"
+  docker-pub-key = "your-machines-ssh-public-key"
   ```
 
 - **XC wide Variables:**

@@ -11,7 +11,7 @@ tag_source_host = "your-host"
 docker-instance-type = "Standard_F2"
 docker-storage-account-type = "Standard_LRS"
 docker-node-user = "adminuser"
-docker-pub-key = "~/.ssh/id_rsa.pub"
+docker-pub-key = "your-machines-ssh-public-key"
 
 # image details docker node
 src_img_ref_docker = {
