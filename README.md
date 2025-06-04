@@ -129,6 +129,6 @@ To destroy all resources created by this project, run:
 terraform destroy
 ```
 
-Type `yes` to confirm the deletion.
+Type `yes` to confirm the deletion or add the argument `--auto-approve`.
 
 ---
