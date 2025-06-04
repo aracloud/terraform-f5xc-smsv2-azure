@@ -69,7 +69,7 @@ Update the values in `terraform.tfvars` to match your deployment needs.
 Here are some key variables to configure:
 
 - **Planet wide Variables:**
-  ```bash
+  ```hcl
   prefix = "your-prefix"
   ```
 
