@@ -92,7 +92,7 @@ Here are some key variables to configure:
 
 Run the following command to initialize Terraform and download required providers:
 
-```hcl
+```bash
 terraform init
 ```
 
