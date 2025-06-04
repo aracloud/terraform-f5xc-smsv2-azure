@@ -69,12 +69,12 @@ Update the values in `terraform.tfvars` to match your deployment needs.
 Here are some key variables to configure:
 
 - **Planet wide Variables:**
-  ```hcl
+  ```bash
   prefix = "your-prefix"
   ```
 
 - **Azure wide Variables:**
-  ```hcl
+  ```bash
   azure-location = "westus"
   tag_owner = "your-email"
   tag_source_host = "your-host"
@@ -82,7 +82,7 @@ Here are some key variables to configure:
   ```
 
 - **XC wide Variables:**
-  ```hcl
+  ```bash
   xc_tenant = "your-tenant"
   xc_namespace = "your-namespace"
   xc_app_domain = "your-app-fqdn"
