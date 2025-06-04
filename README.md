@@ -117,7 +117,7 @@ Apply the configuration to create resources in Azure:
 terraform apply
 ```
 
-Type `yes` to confirm the deployment.
+Type `yes` to confirm the deployment or add the argument `--auto-approve`.
 
 ---
 
