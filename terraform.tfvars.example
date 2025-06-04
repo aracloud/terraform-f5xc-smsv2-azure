@@ -1,12 +1,12 @@
-prefix = "ara-swiss"
+prefix = "your-prefix"
 
 azure-location = "westus"
 # azure-location = "westeurope"
 # azure-location = "switzerlandnorth"
 
 tag_source_git = "terraform-f5xc-smsv2-azure"
-tag_owner = "ara@f5.com"
-tag_source_host = "apupi"
+tag_owner = "your-email"
+tag_source_host = "your-host"
 
 docker-instance-type = "Standard_F2"
 docker-storage-account-type = "Standard_LRS"
@@ -36,9 +36,9 @@ stor_img_ref_ce = {
     version   = "2024.44.1"
 }
 
-xc_tenant = "f5-emea-ent-bceuutam"
-xc_namespace = "a-arquint"
+xc_tenant = "your-tenant"
+xc_namespace = "your-namespace"
 xc_origin_ip1 = "10.0.2.5"
 xc_pub_app_port = "8080"
 xc_pub_app_no_tls = "true"
-xc_app_domain = "xcemea.f5demo.ch"
+xc_app_domain = "your-app-fqdn"
