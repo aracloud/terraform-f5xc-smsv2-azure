@@ -64,6 +64,9 @@ export VOLT_API_P12_FILE=/path/to/the/p12/file_api-creds.p12
 ### 3. Update Variables
 
 #### Modify `terraform.tfvars`
+```bash
+cp terraform.tfvars.example terraform.tfvars
+```
 Update the values in `terraform.tfvars` to match your deployment needs.
 
 Here are some key variables to configure:
