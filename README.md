@@ -70,12 +70,12 @@ Here are some key variables to configure:
 
 - **Planet wide Variables:**
   ```hcl
-  prefix = "<Object Naming Prefix>"
+  prefix = "your-prefix"
   ```
 
 - **Azure wide Variables:**
   ```hcl
-  azure-location = "<Azure Location>"
+  azure-location = "westus"
   tag_owner = "your-email"
   tag_source_host = "your-host"
   docker-pub-key = "your-machines-ssh-public-key"
@@ -83,9 +83,9 @@ Here are some key variables to configure:
 
 - **XC wide Variables:**
   ```hcl
-  xc_tenant = "<F5 SaaS Tenant>"
-  xc_namespace = "<User Namespace>"
-  xc_app_domain = "<FQDN-DNS>"
+  xc_tenant = "your-tenant"
+  xc_namespace = "your-namespace"
+  xc_app_domain = "your-app-fqdn"
   ```
 
 ### 3. Initialize Terraform
