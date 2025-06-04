@@ -45,7 +45,7 @@ project-directory/
 
 ### 1. Clone the Repository
 
-```hcl
+```bash
 git clone <repository_url>
 cd <repository_name>
 ```
@@ -92,7 +92,7 @@ Here are some key variables to configure:
 
 Run the following command to initialize Terraform and download required providers:
 
-```bash
+```hcl
 terraform init
 ```
 
