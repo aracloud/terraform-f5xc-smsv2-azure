@@ -45,7 +45,7 @@ project-directory/
 
 ### 1. Clone the Repository
 
-```bash
+```hcl
 git clone <repository_url>
 cd <repository_name>
 ```
@@ -74,7 +74,7 @@ Here are some key variables to configure:
   ```
 
 - **Azure wide Variables:**
-  ```bash
+  ```hcl
   azure-location = "westus"
   tag_owner = "your-email"
   tag_source_host = "your-host"
@@ -82,7 +82,7 @@ Here are some key variables to configure:
   ```
 
 - **XC wide Variables:**
-  ```bash
+  ```hcl
   xc_tenant = "your-tenant"
   xc_namespace = "your-namespace"
   xc_app_domain = "your-app-fqdn"
