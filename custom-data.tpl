@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# this script is configuring the linux docker host
+
 # prep packages
 sudo apt update
 sudo apt install ca-certificates curl screen apt-transport-https locales cron zsh neofetch git

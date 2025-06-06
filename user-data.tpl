@@ -1,5 +1,7 @@
 #cloud-config
-#Only values that need to be inserted are token and site name. Insert as is without parenthesis
+#This definition is used to configure the CE host
+#Only values that need to be inserted are token and cluster name. 
+#Insert as is without parenthesis
 write_files:
 - path: /etc/hosts
   content: |
