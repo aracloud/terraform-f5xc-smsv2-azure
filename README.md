@@ -56,7 +56,7 @@ cd <repository_name>
 
 ```
 export VES_P12_PASSWORD=<P12_cert_password>
-export VOLT_API_URL=https://<F5_Distrubuted_Cloud_URL>/api
+export VOLT_API_URL=https://f5-emea-ent.console.ves.volterra.io/api
 export VOLT_API_P12_FILE=/path/to/the/p12/file_api-creds.p12
 ```
 
