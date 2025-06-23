@@ -97,7 +97,7 @@ resource "azurerm_virtual_machine" "f5xc-nodes" {
     computer_name  = "${var.prefix}-node-${random_id.xc-mcn-random-id.hex}"
     admin_username = var.ce-node-user
     admin_password = random_string.password.result
-    custom_data = base64encode(templatefile("${path.module}/user-data.tpl", {
+    custom_data = base64encode(templatefile("${path.module}/ce-data.tpl", {
       cluster_name = local.smsv2-site-name,
       token = volterra_token.xc-mcn-sitetoken.id
     }))
