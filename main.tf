@@ -276,5 +276,5 @@ resource "azurerm_linux_virtual_machine" "azure_dkr" {
     version   = var.src_img_ref_docker.version
   }
 
-  custom_data = filebase64("${path.module}/custom-data.tpl")
+  custom_data = filebase64("${path.module}/docker-data.tpl")
 }
