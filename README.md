@@ -30,13 +30,13 @@ Doc for API Certificate generation: https://docs.cloud.f5.com/docs/how-to/user-m
 ```
 project-directory/
 ├── app.tf
-├── custom-data.tpl
+├── cat-data.tpl
+├── docker-data.tpl
 ├── LICENSE
 ├── main.tf
 ├── providers.tf
 ├── README.md
 ├── terraform.tfvars.example
-├── user-data.tpl
 └── vars.tf
 ```
 
