@@ -22,6 +22,8 @@ Before using this Terraform project, ensure you have the following:
 - API Certificate (P12 file and URL) for **F5 SaaS** access
 - SSH public key for Docker Host VM (adminuser) authentication
 - A DNS config in F5 SaaS for proper service deplyoment (DNS Delegation or Zone for Autocert)
+- - In this case we use let's encrypt while configuring Autocert 
+- - Therefore a third level domain is used for DNS delegation
 
 Doc for API Certificate generation: https://docs.cloud.f5.com/docs/how-to/user-mgmt/credentials 
 
@@ -89,7 +91,7 @@ Here are some key variables to configure:
   ```hcl
   xc_tenant = "your-tenant"
   xc_namespace = "your-namespace"
-  xc_app_domain = "your-app-fqdn"
+  xc_app_domain = "your-third-level-domain"
   ```
 
 ### 4. Initialize Terraform
