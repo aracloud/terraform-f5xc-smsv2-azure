@@ -71,7 +71,7 @@ cp terraform.tfvars.example terraform.tfvars
 ```
 Update the values in `terraform.tfvars` to match your deployment needs.
 
-Here are some key variables to configure:
+Here are the main key variables to configure:
 
 - **Planet wide Variables:**
   ```hcl
