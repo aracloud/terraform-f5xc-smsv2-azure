@@ -18,12 +18,11 @@ The modules are available here : https://registry.terraform.io/providers/volterr
 Before using this Terraform project, ensure you have the following:
 
 - **Terraform CLI** installed on your machine
-- An **Azure account** (CLI "az login") to create **subnets**, **security groups** etc.
+- An **Azure account** (CLI "az login") to create **resource groups**, **security groups**, **networks** etc.
 - API Certificate (P12 file and URL) for **F5 SaaS** access
 - SSH public key for Docker Host VM (adminuser) authentication
-- A DNS config in F5 SaaS for proper service deplyoment (DNS Delegation or Zone for Autocert)
-  - In this case we use let's encrypt while configuring Autocert 
-  - Therefore a third level domain is used for DNS delegation
+- An third-level-domain in F5 SaaS for service deplyoment (DNS Delegation)
+  - In this case we use let's encrypt while configuring Autocert for TLS key material
 
 Doc for API Certificate generation: https://docs.cloud.f5.com/docs/how-to/user-mgmt/credentials 
 
