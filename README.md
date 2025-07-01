@@ -4,7 +4,7 @@
 This Terraform project deploys following items:
 - Docker host with Demo application (DVWA) in **Azure** 
 - CE single NIC Host in **Azure** connected to F5 SaaS platform
-- Virtual Server in XC with WAF profile
+- Virtual Server in **F5 Saas** with WAF profile
 
 This repository is for demo or PoC purposes only!
 
