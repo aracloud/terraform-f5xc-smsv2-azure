@@ -8,6 +8,12 @@ for demo or PoC purposes only.
 The deployment will create a random id which is used for several objects
 for naming convention.
 
+
+<p align="center">
+  <img src="xc-cloud.drawio.png" 
+</p>
+
+
 ---
 
 ## Getting Started
