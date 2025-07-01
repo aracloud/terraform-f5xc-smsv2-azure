@@ -5,8 +5,8 @@ This Terraform project deploys a single Azure virtual machine (VMs) integrated w
 using single NIC configuration and a docker host in **Azure** with a demo application (DVWA)
 for demo or PoC purposes only.
 
-The deployment will create a random id which is used for several object
-naming conventions.
+The deployment will create a random id which is used for several objects
+for naming convention.
 
 ---
 
