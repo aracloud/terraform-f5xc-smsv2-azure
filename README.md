@@ -47,7 +47,8 @@ project-directory/
 ├── providers.tf
 ├── README.md
 ├── terraform.tfvars.example
-└── vars.tf
+└── vars.tfxc-cloud.drawio.png
+└── xc-cloud.drawio.png
 └── xc-lb.tf
 ```
 
