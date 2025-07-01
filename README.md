@@ -1,4 +1,4 @@
-# F5 SaaS (RE-CE) deployment to demo use-cases
+# F5 SaaS (RE-CE) demo with terraform
 
 ## Overview
 This Terraform project deploys following items:
@@ -6,7 +6,7 @@ This Terraform project deploys following items:
 - CE single NIC Host in **Azure** connected to F5 SaaS platform
 - Virtual Server in **F5 Saas** with WAF profile
 
-This repository is for demo or PoC purposes only!
+This repository is for demo or PoC show cases only!
 
 The deployment will create a random id which is 
 used for several objects for naming convention.
