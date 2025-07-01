@@ -1,12 +1,16 @@
-# F5 SaaS Customer Edge (CE) with Public IP Assignment (Usable for All Normal Use Cases)
+# F5 SaaS (RE-CE) deployment (Demo Use Cases)
 
 ## Overview
-This Terraform project deploys a single Azure virtual machine (VMs) integrated with F5 SaaS
-using single NIC configuration and a docker host in **Azure** with a demo application (DVWA)
-for demo or PoC purposes only.
+This Terraform project deploys following items:
+- Docker host in **Azure**
+- CE Host in **Azure** which is connected to F5 SaaS platform
+  using single NIC configuration 
+- Demo application (DVWA)
 
-The deployment will create a random id which is used for several objects
-for naming convention.
+This repository is for demo or PoC purposes only!
+
+The deployment will create a random id which is 
+used for several objects for naming convention.
 
 
 <p align="center">
