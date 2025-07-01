@@ -1,4 +1,4 @@
-# F5 SaaS (RE-CE) deployment (Demo Use Cases)
+# F5 SaaS (RE-CE) deployment to demo use-cases
 
 ## Overview
 This Terraform project deploys following items:
