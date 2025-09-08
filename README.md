@@ -27,7 +27,7 @@ The modules are available here : https://registry.terraform.io/providers/volterr
 Before using this Terraform project, ensure you have the following:
 
 - **Terraform CLI** installed on your machine
-- An **Azure account** (CLI "az login") to create **resource groups**, **security groups**, **networks** etc.
+- An **Azure account** (CLI "az login --use-device-code") to create **resource groups**, **security groups**, **networks** etc.
 - API Certificate (P12 file and URL) for **F5 SaaS** access
 - SSH public key for Docker Host VM (adminuser) authentication
 - An third-level-domain in F5 SaaS for service deplyoment (DNS Delegation)
