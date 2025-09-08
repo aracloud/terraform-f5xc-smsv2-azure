@@ -47,7 +47,6 @@ resource "volterra_app_firewall" "waap-tf" {
   
   // Blocking mode - optional - if not set, policy is in MONITORING
   blocking = true
-  depends_on = [volterra_http_loadbalancer.lb-https-tf]
 }
 
 //==========================================================================
@@ -99,8 +98,7 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   //End of mandatory "Security configuration"
   //Mandatory "Load Balancing Control"
   source_ip_stickiness = true
-  //End of mandatory "Load Balancing Control"
-  
+  //End of mandatory "Load Balancing Control"  
 }
 
 //End of the file
