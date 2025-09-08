@@ -99,6 +99,7 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   //Mandatory "Load Balancing Control"
   source_ip_stickiness = true
   //End of mandatory "Load Balancing Control"
+  depends_on = [volterra_app_firewall.waap-tf]
 }
 
 //End of the file
