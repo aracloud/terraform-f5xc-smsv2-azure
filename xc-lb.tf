@@ -2,9 +2,9 @@
 //Definition of the Origin, 1-origin.tf
 //Start of the TF file
 resource "volterra_origin_pool" "xc_origin_pool" {
-  name                   = local.smsv2-site-name
+  name      = local.smsv2-site-name
   //Name of the namespace where the origin pool must be deployed
-  namespace              = var.xc_namespace
+  namespace = var.xc_namespace
  
    origin_servers {
     private_ip {
@@ -53,7 +53,10 @@ resource "volterra_app_firewall" "waap-tf" {
 //Definition of the Load-Balancer, 2-https-lb.tf
 //Start of the TF file
 resource "volterra_http_loadbalancer" "lb-https-tf" {
-  depends_on = [volterra_origin_pool.xc_origin_pool]
+  depends_on = [
+    volterra_origin_pool.xc_origin_pool,
+    volterra_app_firewall.waap-tf
+  ]
   //Mandatory "Metadata"
   name      = local.smsv2-site-name
   //Name of the namespace where the origin pool must be deployed
@@ -99,7 +102,6 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   //Mandatory "Load Balancing Control"
   source_ip_stickiness = true
   //End of mandatory "Load Balancing Control"
-  depends_on = [volterra_app_firewall.waap-tf]
 }
 
 //End of the file
