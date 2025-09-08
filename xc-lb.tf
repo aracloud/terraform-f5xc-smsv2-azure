@@ -98,7 +98,7 @@ resource "volterra_http_loadbalancer" "lb-https-tf" {
   //End of mandatory "Security configuration"
   //Mandatory "Load Balancing Control"
   source_ip_stickiness = true
-  //End of mandatory "Load Balancing Control"  
+  //End of mandatory "Load Balancing Control"
 }
 
 //End of the file
