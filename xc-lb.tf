@@ -47,6 +47,7 @@ resource "volterra_app_firewall" "waap-tf" {
   
   // Blocking mode - optional - if not set, policy is in MONITORING
   blocking = true
+  depends_on = [volterra_http_loadbalancer.lb-https-tf]
 }
 
 //==========================================================================
