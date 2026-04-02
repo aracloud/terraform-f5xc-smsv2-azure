@@ -13,7 +13,7 @@ used for several objects for naming convention.
 
 
 <p align="center">
-  <img src="xc-cloud.drawio.png" 
+  <img src="img/xc-cloud.drawio.png" 
 </p>
 
 
@@ -40,7 +40,6 @@ Doc for API Certificate generation: https://docs.cloud.f5.com/docs/how-to/user-m
 ```
 project-directory/
 ├── azure.tf
-├── ce-data.tpl
 ├── docker-data.tpl
 ├── docker-host.tf
 ├── LICENSE
@@ -50,6 +49,7 @@ project-directory/
 ├── terraform.tfvars
 ├── terraform.tfvars.example
 ├── vars.tf
+├── xc-ce-data.tpl
 ├── xc-cloud.drawio.png
 ├── xc-lb.tf
 └── xc-smsv2.tf
