@@ -4,6 +4,7 @@
 locals {
   smsv2-site-name = "${var.prefix}-ce-azure-${random_id.xc-mcn-random-id.hex}"
   today-timestamp = timestamp()
+  hostname = getenv("HOSTNAME")  
 }
 
 
