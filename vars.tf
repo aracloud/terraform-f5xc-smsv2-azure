@@ -4,7 +4,6 @@
 locals {
   smsv2-site-name = "${var.prefix}-ce-azure-${random_id.xc-mcn-random-id.hex}"
   today-timestamp = timestamp()
-  hostname = getenv("HOSTNAME")  
 }
 
 
@@ -35,9 +34,9 @@ variable "tag_owner" {
 }
 
 # tag: source "host" for azure resource group 
-variable "tag_source_host" {
-  type = string
-}
+#variable "tag_source_host" {
+#  type = string
+#}
 
 # azure docker node instance type
 variable "docker-instance-type" {
