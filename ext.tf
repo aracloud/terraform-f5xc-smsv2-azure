@@ -1,3 +1,4 @@
+# Fetch local hostname for tagging in Azure
 data "external" "hostname" {
   program = [
     "bash",
