@@ -42,15 +42,17 @@ project-directory/
 ├── azure.tf
 ├── docker-data.tpl
 ├── docker-host.tf
+├── ext.tf
+├── img
+│   └── xc-cloud.drawio.png
 ├── LICENSE
 ├── main.tf
+├── outputs.tf
 ├── providers.tf
 ├── README.md
-├── terraform.tfvars
 ├── terraform.tfvars.example
 ├── vars.tf
 ├── xc-ce-data.tpl
-├── xc-cloud.drawio.png
 ├── xc-lb.tf
 └── xc-smsv2.tf
 ```
@@ -96,8 +98,7 @@ Here are the main key variables to configure:
   ```hcl
   azure-location = "westus"
   tag_owner = "your-email"
-  tag_source_host = "your-host"
-  docker-pub-key = "your-machines-ssh-public-key"
+  docker-pub-key = "path-to-your-machines-ssh-public-key"
   ```
 
 - **XC wide Variables:**
