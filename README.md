@@ -138,7 +138,7 @@ Type `yes` to confirm the deployment or add the argument `--auto-approve`.
 
 ---
 
-## Cleanup
+### 7. Cleanup
 
 To destroy all resources created by this project, run:
 
