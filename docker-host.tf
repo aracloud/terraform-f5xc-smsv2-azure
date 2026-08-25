@@ -1,7 +1,7 @@
 # azure docker host running workloads
 resource "azurerm_linux_virtual_machine" "azure_dkr" {
   depends_on          = [azurerm_network_interface_security_group_association.azure_nisga_dkr]
-  name                = "${var.prefix}-dkr-node"
+  name                = "${var.prefix}-dkr-node-${random_id.xc-mcn-random-id.hex}"
   resource_group_name = azurerm_resource_group.azure_rg.name
   location            = azurerm_resource_group.azure_rg.location
   size                = var.docker-instance-type
