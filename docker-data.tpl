@@ -31,11 +31,15 @@ sudo /usr/sbin/usermod -aG docker adminuser
 
 # deploy docker compose application
 sudo mkdir -p /opt/dvwa
-sudo curl -fsSL https://raw.githubusercontent.com/aracloud/terraform-f5xc-smsv2-azure/main/compose.yml \
-  -o /opt/dvwa/compose.yml
 
-sudo curl -fsSL https://raw.githubusercontent.com/aracloud/terraform-f5xc-smsv2-azure/main/init.sql \
-  -o /opt/dvwa/init.sql
+
+cat <<'EOF' | sudo tee /opt/dvwa/compose.yml > /dev/null
+${compose_yml}
+EOF
+
+cat <<'EOF' | sudo tee /opt/dvwa/init.sql > /dev/null
+${init_sql}
+EOF
 
 cd /opt/dvwa
 sudo docker compose pull

@@ -29,7 +29,15 @@ resource "azurerm_linux_virtual_machine" "azure_dkr" {
     version   = var.src_img_ref_docker.version
   }
 
-  custom_data = filebase64("${path.module}/docker-data.tpl")
+  #custom_data = filebase64("${path.module}/docker-data.tpl")
+
+  custom_data = base64encode(
+  templatefile("${path.module}/docker-data.tpl", {
+    compose_yml = file("${path.module}/compose.yml")
+    init_sql = file("${path.module}/init.sql")
+  })
+)
+
 }
 
 resource "azurerm_network_interface" "azure_nic_dkr" {
