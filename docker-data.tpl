@@ -27,12 +27,7 @@ sleep 3
 sudo /usr/sbin/usermod -aG docker adminuser
 
 #sudo docker run -dit -p 8080:80 --name dvwa aracloud/docker-dvwa
-#sudo docker run -dit -p 8080:80 --name dvwa kaakaww/dvwa-docker:latest
-
-cd /home/adminuser
-git clone https://github.com/aracloud/ara-digininja-dvwa.git
-cd ./ara-digininja-dvwa
-sudo docker compose up -d
+sudo docker run -dit -p 8080:80 --name dvwa kaakaww/dvwa-docker:latest
 
 # set locales
 sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen
