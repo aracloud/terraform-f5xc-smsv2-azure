@@ -27,7 +27,19 @@ sleep 3
 sudo /usr/sbin/usermod -aG docker adminuser
 
 #sudo docker run -dit -p 8080:80 --name dvwa aracloud/docker-dvwa
-sudo docker run -dit -p 8080:80 --name dvwa kaakaww/dvwa-docker:latest
+#sudo docker run -dit -p 8080:80 --name dvwa kaakaww/dvwa-docker:latest
+
+# deploy docker compose application
+sudo mkdir -p /opt/dvwa
+sudo curl -fsSL https://raw.githubusercontent.com/aracloud/terraform-f5xc-smsv2-azure/main/compose.yml \
+  -o /opt/dvwa/compose.yml
+
+sudo curl -fsSL https://raw.githubusercontent.com/aracloud/terraform-f5xc-smsv2-azure/main/init.sql \
+  -o /opt/dvwa/init.sql
+
+cd /opt/dvwa
+sudo docker compose pull
+sudo docker compose up -d
 
 # set locales
 sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen
