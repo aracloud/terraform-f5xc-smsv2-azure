@@ -7,7 +7,7 @@ azure-location = "westus"
 tag_source_git = "terraform-f5xc-smsv2-azure"
 tag_owner = "your-email"
 
-src_ip_ctrl = "your source ip"
+src_ip_ctrl = "your source ip/32"
 
 docker-instance-type = "Standard_F2"
 docker-storage-account-type = "Standard_LRS"
