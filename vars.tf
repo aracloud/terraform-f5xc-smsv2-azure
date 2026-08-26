@@ -96,6 +96,12 @@ variable "stor_img_ref_ce" {
   })
 }
 
+# source ip access control including subnet mask
+variable "src_ip_ctrl" {
+  description = "source ip access control"
+  type = string
+}
+
 ####################################
 # XC lb related vars
 
