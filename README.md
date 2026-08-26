@@ -98,6 +98,7 @@ Here are the main key variables to configure:
   ```hcl
   azure-location = "westus"
   tag_owner = "your-email"
+  src_ip_ctrl = "your_source_ip/32 or set * for ANY access"
   docker-pub-key = "path-to-your-machines-ssh-public-key"
   ```
 
