@@ -38,6 +38,6 @@ stor_img_ref_ce = {
 xc_tenant = "your-tenant"
 xc_namespace = "your-namespace"
 xc_origin_ip1 = "10.0.2.5"
-xc_pub_app_port = "4281"
+xc_pub_app_port = "8080"
 xc_pub_app_no_tls = "true"
 xc_app_domain = "your-app-fqdn"
