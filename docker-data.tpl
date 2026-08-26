@@ -28,22 +28,7 @@ sudo /usr/sbin/usermod -aG docker adminuser
 
 #sudo docker run -dit -p 8080:80 --name dvwa aracloud/docker-dvwa
 #sudo docker run -dit -p 8080:80 --name dvwa kaakaww/dvwa-docker:latest
-
-# deploy docker compose application
-sudo mkdir -p /opt/dvwa
-
-
-cat <<'EOF' | sudo tee /opt/dvwa/compose.yml > /dev/null
-${compose_yml}
-EOF
-
-cat <<'EOF' | sudo tee /opt/dvwa/init.sql > /dev/null
-${init_sql}
-EOF
-
-cd /opt/dvwa
-sudo docker compose pull
-sudo docker compose up -d
+sudo docker run -dit -p 8080:80 --name dvwa ghcr.io/aracloud/dvwa-alpine:latest
 
 # set locales
 sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen
