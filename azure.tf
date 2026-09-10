@@ -4,7 +4,7 @@
 
 resource "azurerm_resource_group" "azure_rg" {
   name     = "${var.prefix}-ce-rg-${random_id.xc-mcn-random-id.hex}"
-  location = "${var.azure-location}"
+  location = var.azure-location
   tags = {
     source = var.tag_source_git
     owner  = var.tag_owner

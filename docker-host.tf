@@ -32,9 +32,9 @@ resource "azurerm_linux_virtual_machine" "azure_dkr" {
   #custom_data = filebase64("${path.module}/docker-data.tpl")
 
   custom_data = base64encode(
-  templatefile("${path.module}/docker-data.tpl", {
-  })
-)
+    templatefile("${path.module}/docker-data.tpl", {
+    })
+  )
 
 }
 
@@ -53,7 +53,7 @@ resource "azurerm_network_interface" "azure_nic_dkr" {
 }
 
 resource "azurerm_network_interface_security_group_association" "azure_nisga_dkr" {
-  network_interface_id    = azurerm_network_interface.azure_nic_dkr.id
+  network_interface_id      = azurerm_network_interface.azure_nic_dkr.id
   network_security_group_id = azurerm_network_security_group.azure_nsg.id
 }
 

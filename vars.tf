@@ -12,7 +12,7 @@ locals {
 
 variable "prefix" {
   description = "prefix for created objects"
-  type = string
+  type        = string
 }
 
 ####################################
@@ -20,7 +20,7 @@ variable "prefix" {
 
 variable "azure-location" {
   description = "azure location to run the deployment"
-  type = string
+  type        = string
 }
 
 # tag: source "git" for azure resource group 
@@ -36,25 +36,25 @@ variable "tag_owner" {
 # azure docker node instance type
 variable "docker-instance-type" {
   description = "instance type"
-  type = string
+  type        = string
 }
 
 # azure docker node disk type
 variable "docker-storage-account-type" {
   description = "storage account type"
-  type = string
+  type        = string
 }
 
 # azure docker node user
 variable "docker-node-user" {
   description = "docker user"
-  type = string
+  type        = string
 }
 
 # azure ssh public key
 variable "docker-pub-key" {
   description = "public key on terraform machine"
-  type = string
+  type        = string
 }
 
 # azure docker node image reference
@@ -71,19 +71,19 @@ variable "src_img_ref_docker" {
 # azure ce node type
 variable "f5xc-sms-instance-type" {
   description = "instance type"
-  type = string
+  type        = string
 }
 
 # azure ce node disk type
 variable "f5xc-sms-storage-account-type" {
   description = "storage account type"
-  type = string
+  type        = string
 }
 
 # ce node user
 variable "ce-node-user" {
   description = "ce user"
-  type = string
+  type        = string
 }
 
 # azure ce node image reference
@@ -99,7 +99,7 @@ variable "stor_img_ref_ce" {
 # source ip access control including subnet mask
 variable "src_ip_ctrl" {
   description = "source ip access control"
-  type = string
+  type        = string
 }
 
 ####################################

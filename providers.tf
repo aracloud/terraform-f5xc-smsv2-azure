@@ -18,7 +18,7 @@ terraform {
       source = "hashicorp/external"
     }
     volterra = {
-      source = "volterraedge/volterra"
+      source  = "volterraedge/volterra"
       version = ">=0.0.6"
     }
   }

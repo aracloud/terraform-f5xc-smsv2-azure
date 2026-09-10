@@ -13,7 +13,7 @@ resource "volterra_securemesh_site_v2" "xc-mcn-smsv2-appstack" {
   enable_ha               = false
 
   labels = {
-    "ves.io/provider"     = "ves-io-AZURE"
+    "ves.io/provider" = "ves-io-AZURE"
   }
 
   re_select {
@@ -33,10 +33,10 @@ resource "volterra_securemesh_site_v2" "xc-mcn-smsv2-appstack" {
 
 # xc ce initialization token 
 resource "volterra_token" "xc-mcn-sitetoken" {
-  name      = "${var.prefix}-token-${random_id.xc-mcn-random-id.hex}"
-  namespace = "system"
-  type = "1"
-  site_name = local.smsv2-site-name
+  name       = "${var.prefix}-token-${random_id.xc-mcn-random-id.hex}"
+  namespace  = "system"
+  type       = "1"
+  site_name  = local.smsv2-site-name
   depends_on = [volterra_securemesh_site_v2.xc-mcn-smsv2-appstack]
 }
 
@@ -83,7 +83,7 @@ resource "azurerm_virtual_machine" "f5xc-nodes" {
     admin_password = random_string.password.result
     custom_data = base64encode(templatefile("${path.module}/xc-ce-data.tpl", {
       cluster_name = local.smsv2-site-name,
-      token = volterra_token.xc-mcn-sitetoken.id
+      token        = volterra_token.xc-mcn-sitetoken.id
     }))
   }
 
@@ -112,7 +112,7 @@ resource "azurerm_network_interface" "azure_nic_ce" {
 }
 
 resource "azurerm_network_interface_security_group_association" "azure_nisga_ce" {
-  network_interface_id    = azurerm_network_interface.azure_nic_ce.id
+  network_interface_id      = azurerm_network_interface.azure_nic_ce.id
   network_security_group_id = azurerm_network_security_group.azure_nsg.id
 }
 
