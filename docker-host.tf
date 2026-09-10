@@ -33,8 +33,6 @@ resource "azurerm_linux_virtual_machine" "azure_dkr" {
 
   custom_data = base64encode(
   templatefile("${path.module}/docker-data.tpl", {
-    compose_yml = file("${path.module}/compose.yml")
-    init_sql = file("${path.module}/init.sql")
   })
 )
 
